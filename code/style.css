@@ -86,38 +86,69 @@ body {
     color:black;
 }
 
+.menu-part-3 .ri-search-line {
+    transition: transform 0.3s ease;
+}
+
+.menu-part-3 .ri-search-line:hover {
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.menu-part-3 .ri-user-3-line {
+    transition: transform 0.3s ease;
+}
+
+.menu-part-3 .ri-user-3-line:hover {
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.menu-part-3 .ri-shopping-bag-3-line {
+    transition: transform 0.3s ease;
+}
+
+.menu-part-3 .ri-shopping-bag-3-line:hover {
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
 .round-button {
-    border: 0px grey solid;
+    border: 0px lightgrey solid;
     border-radius: 5px;
 }
 
+.search-div:focus-within {
+    border-color: black;
+}
+
+.search-div {
+    height: 40px;
+    border: 1px lightgrey solid;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0);
+    padding-right: 8px;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.2s ease-in-out;
+}
+
 .sneaky-input {
-    border: 0px lightgray;
+    border: 0px lightgrey;
     height: 35px;
-    margin-right: 8px;
+    margin-right: 4px;
     margin-left: 10px;
     background-color: white;
     outline: none;
     font-size: medium;
     width: 110px;
-    color: lightgray;
+    color: black;
 }
 
 .sneaky-input::placeholder {
-    color: lightgray;
-}
-
-.search-div {
-    height: 40px;
-    border: 1px lightgray solid;
-    border-radius: 20px;
-    background-color: rgba(255,255,255,0);
-    padding-right: 8px;
-    padding-left: 5px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: grey;
 }
 
 #search-in-box {
