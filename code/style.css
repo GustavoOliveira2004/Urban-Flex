@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family:"Inter", sans-serif;
     font-weight: 400;
     padding-top: 85px;
 }
@@ -83,10 +83,7 @@ body {
     font-size: 25px;
     font-weight: 500;
     cursor: pointer;
-}
-
-.menu-part-3 i:hover {
-    font-weight: 800;
+    color:black;
 }
 
 .round-button {
@@ -95,17 +92,36 @@ body {
 }
 
 .sneaky-input {
-    border: 0px grey solid;
-    height: 30px;
-    background-color: grey;
+    border: 0px lightgray;
+    height: 35px;
+    margin-right: 8px;
+    margin-left: 10px;
+    background-color: white;
+    outline: none;
+    font-size: medium;
+    width: 110px;
+    color: lightgray;
+}
+
+.sneaky-input::placeholder {
+    color: lightgray;
 }
 
 .search-div {
-    height: 35px;
-    border: 0px grey solid;
-    border-radius: 3px;
-    background-color: grey;
-    padding-right: 5px;
+    height: 40px;
+    border: 1px lightgray solid;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0);
+    padding-right: 8px;
+    padding-left: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-in-box {
+    margin-left: 10px;
 }
 
 .carousel-container {
