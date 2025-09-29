@@ -89,6 +89,25 @@ body {
     font-weight: 800;
 }
 
+.round-button {
+    border: 0px grey solid;
+    border-radius: 5px;
+}
+
+.sneaky-input {
+    border: 0px grey solid;
+    height: 30px;
+    background-color: grey;
+}
+
+.search-div {
+    height: 35px;
+    border: 0px grey solid;
+    border-radius: 3px;
+    background-color: grey;
+    padding-right: 5px;
+}
+
 .carousel-container {
     height: calc(100vh - 85px);
     width: 100%;
