@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family:"Inter", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     padding-top: 85px;
 }
@@ -27,6 +27,7 @@ body {
     left: 0;
     z-index: 999;
     background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .top-navbar-part-1 {
@@ -83,50 +84,28 @@ body {
     font-size: 25px;
     font-weight: 500;
     cursor: pointer;
-    color:black;
-}
-
-.top-navbar-part-3 .ri-search-line {
+    color: black;
     transition: transform 0.3s ease;
 }
 
-.top-navbar-part-3 .ri-search-line:hover {
-    font-weight: bold;
-    transform: scale(1.1);
-}
-
-.top-navbar-part-3 .ri-user-3-line {
-    transition: transform 0.3s ease;
-}
-
-.top-navbar-part-3 .ri-user-3-line:hover {
-    font-weight: bold;
-    transform: scale(1.1);
-}
-
-.top-navbar-part-3 .ri-shopping-bag-3-line {
-    transition: transform 0.3s ease;
-}
-
-.top-navbar-part-3 .ri-shopping-bag-3-line:hover {
+.top-navbar-part-3 i:hover {
     font-weight: bold;
     transform: scale(1.1);
 }
 
 .round-button {
-    border: 0px gainsboro solid;
+    border: 0 solid gainsboro;
     border-radius: 5px;
-}
-
-.search-div:focus-within {
-    border-color: black;
+    padding: 8px 0 !important;
+    width: 95px;
+    font-weight: 300 !important;
 }
 
 .search-div {
     height: 40px;
-    border: 1px gainsboro solid;
+    border: 1px solid gainsboro;
     border-radius: 20px;
-    background-color: rgba(255,255,255,0);
+    background-color: transparent;
     padding-right: 8px;
     padding-left: 5px;
     display: flex;
@@ -135,8 +114,12 @@ body {
     transition: border-color 0.2s ease-in-out;
 }
 
+.search-div:focus-within {
+    border-color: black;
+}
+
 .sneaky-input {
-    border: 0px gainsboro;
+    border: 0;
     height: 35px;
     margin-right: 4px;
     margin-left: 10px;
@@ -166,6 +149,7 @@ body {
     display: flex;
     height: 100%;
     transition: transform 0.5s ease-in-out;
+    animation: slide 25s infinite ease-in-out;
 }
 
 .carousel-slides img {
@@ -193,15 +177,15 @@ body {
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.carousel-dots .dot {
     visibility: hidden;
     position: relative;
 }
 
-.carousel-slides img:nth-child(1):hover ~ .carousel-dots .dot:nth-child(1), .carousel-slides img:nth-child(2):hover ~ .carousel-dots .dot:nth-child(2), .carousel-slides img:nth-child(3):hover ~ .carousel-dots .dot:nth-child(3), .carousel-slides img:nth-child(4):hover ~ .carousel-dots .dot:nth-child(4), .carousel-slides img:nth-child(5):hover ~ .carousel-dots .dot:nth-child(5) {
+.carousel-slides img:hover ~ .carousel-dots .dot {
     visibility: visible;
+}
+
+.carousel-slides img:nth-child(1):hover ~ .carousel-dots .dot:nth-child(1), .carousel-slides img:nth-child(2):hover ~ .carousel-dots .dot:nth-child(2), .carousel-slides img:nth-child(3):hover ~ .carousel-dots .dot:nth-child(3), .carousel-slides img:nth-child(4):hover ~ .carousel-dots .dot:nth-child(4), .carousel-slides img:nth-child(5):hover ~ .carousel-dots .dot:nth-child(5) {
     background-color: black;
 }
 
@@ -217,14 +201,9 @@ body {
     100% { transform: translateX(-400%); }
 }
 
-.carousel-slides {
-    animation: slide 25s infinite ease-in-out;
-}
-
 .novidades {
     padding: 20px 90px;
     margin-top: 80px;
-    padding-bottom: 0px;
 }
 
 .row {
@@ -234,13 +213,7 @@ body {
     margin-bottom: 30px;
 }
 
-.row h2 {
-    color: black;
-    font-size: 31px;
-    font-weight: 600;
-}
-
-.row h2:nth-of-type(2) {
+.title-link {
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
@@ -248,7 +221,7 @@ body {
     color: black;
 }
 
-.row h2:nth-of-type(2)::after {
+.title-link::after {
     content: '';
     position: absolute;
     left: 0;
@@ -259,8 +232,13 @@ body {
     transition: width 0.3s ease;
 }
 
-.row h2:nth-of-type(2):hover::after {
+.title-link:hover::after {
     width: 100%;
+}
+
+.row h2:first-of-type {
+    font-size: 31px;
+    font-weight: 600;
 }
 
 .photo-grid {
@@ -271,19 +249,18 @@ body {
     padding-bottom: 80px;
 }
 
-.photo-grid img {
+.product-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-item img {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
-    
-}
-
-.product-item-1, .product-item-2, .product-item-3, .product-item-4 {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
 }
 
 .main-img {
@@ -301,11 +278,11 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-.product-item-1:hover .hover-img, .product-item-2:hover .hover-img, .product-item-3:hover .hover-img, .product-item-4:hover .hover-img {
+.product-item:hover .hover-img {
     opacity: 1;
 }
 
-.product-item-1:hover .main-img, .product-item-2:hover .main-img, .product-item-3:hover .main-img, .product-item-4:hover .main-img {
+.product-item:hover .main-img {
     opacity: 0;
 }
 
@@ -337,23 +314,56 @@ body {
 .two-photo-section {
     display: flex;
     width: 100%;
-}
-
-.two-photo-section img {
-    width: 100%;
-    height: 650px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-    position: relative;
-}
-
-.two-photo-section img:hover {
-    transform: scale(1.05);
-    z-index: 2;
+    margin-top: -40px;
 }
 
 .image-container {
     overflow: hidden;
     width: 50%;
     height: 650px;
+    position: relative;
+}
+
+.two-photo-section .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+
+.two-photo-section .image-container:hover img {
+    transform: scale(1.05);
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 3vw;
+    left: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    z-index: 2;
+}
+
+.text-overlay h2 {
+    font-size: 31px;
+    font-weight: 600;
+    color: white;
+}
+
+.text-overlay .round-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.text-overlay .round-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
 }
