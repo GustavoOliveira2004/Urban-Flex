@@ -223,14 +223,14 @@ body {
 
 .novidades {
     padding: 20px 90px;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .row h2 {
@@ -276,12 +276,10 @@ body {
     display: block;
 }
 
-
-
-
 .product-item-1, .product-item-2, .product-item-3, .product-item-4 {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .main-img {
@@ -299,16 +297,89 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-.product-item-1:hover .hover-img,
-.product-item-2:hover .hover-img,
-.product-item-3:hover .hover-img,
-.product-item-4:hover .hover-img {
+.product-item-1:hover .hover-img, .product-item-2:hover .hover-img, .product-item-3:hover .hover-img, .product-item-4:hover .hover-img {
     opacity: 1;
 }
 
-.product-item-1:hover .main-img,
-.product-item-2:hover .main-img,
-.product-item-3:hover .main-img,
-.product-item-4:hover .main-img {
+.product-item-1:hover .main-img, .product-item-2:hover .main-img, .product-item-3:hover .main-img, .product-item-4:hover .main-img {
     opacity: 0;
+}
+
+.product-info-1 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.product-name-1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.product-price-1 {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.product-info-2 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.product-name-2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.product-price-2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.product-info-3 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.product-name-3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.product-price-3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.product-info-4 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.product-name-4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: silver;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.product-price-4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
 }
