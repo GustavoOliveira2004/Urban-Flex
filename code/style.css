@@ -309,7 +309,6 @@ body {
     opacity: 0;
 }
 
-
 .product-info {
     text-align: center;
     margin-top: 5px;
@@ -345,15 +344,13 @@ body {
     height: 650px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
-    position: relative; /* Isso faz o zoom "flutuar" acima do layout */
-    z-index: 1; /* Garante que a imagem com hover fique por cima da outra */
+    position: relative;
 }
 
 .two-photo-section img:hover {
     transform: scale(1.05);
-    z-index: 2; /* Aumenta o z-index para garantir que a imagem com zoom fique na frente */
+    z-index: 2;
 }
-
 
 .image-container {
     overflow: hidden;
